@@ -6,7 +6,7 @@ module ConsistencyFail
       def unique_indexes(model)
         return [] if !model.table_exists?
 
-        unique_indexes_by_table(model, model.connection, model.table_name, schema)
+        unique_indexes_by_table(model, model.connection, model.table_name)
       end
 
       def unique_indexes_by_table(model, connection, table_name)
